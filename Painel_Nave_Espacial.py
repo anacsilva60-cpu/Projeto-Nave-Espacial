@@ -1,4 +1,4 @@
-combustível = 100
+combustível = 110
 tripulantes = []
 
 #Definição das Funções
@@ -13,7 +13,7 @@ def viajar():
 
 def abastecer():
     global combustível
-    combustível = 100 
+    combustível = 110 
     print("\nTanque Abastecido!⛽")
 
 def status_nave():
@@ -21,7 +21,6 @@ def status_nave():
     print(f"Temos {combustível} de Combustível")
     print(f"Os Tripulantes são {tripulantes}")
     print("-" * 32 + "\n")
-
 def registrar_tripulante():
     novo_tripulante = input("Qual o nome do Tripulante?: ")
     tripulantes.append(novo_tripulante)
