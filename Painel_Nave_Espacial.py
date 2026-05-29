@@ -1,4 +1,4 @@
-combustível = 110
+combustível = 100
 tripulantes = []
 
 #Definição das Funções
@@ -13,7 +13,7 @@ def viajar():
 
 def abastecer():
     global combustível
-    combustível = 110 
+    combustível = 100 
     print("\nTanque Abastecido!⛽")
 
 def status_nave():
