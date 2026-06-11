@@ -29,7 +29,7 @@ def registrar_tripulante():
 
 def suprimir_tripulante():
     if len(tripulantes) == 0:
-        print("Não há Tripulantes para remover!!")
+        print("Não há Tripulantes para remover!!⚠️")
         print("Adicione um Tripulante para prosseguir...")
     else:
         ## tripulante_removido = input("Qual o nome do Tripulante que quer retirar?: ") 
