@@ -4,11 +4,16 @@ tripulantes = []
 #Definição das Funções
 def viajar():
     global combustível
-    if(combustível >= 30):
-        combustível = combustível - 30 ## ----> Gastar combustível
-        print("\nA Nave Viajou!!🚀🚀")
+    if len(tripulantes) == 0:
+        print("\nNão é possível Viajar! Não há Tripulantes na Nave!")
+        print("\nAdicione Tripulantes para prosseguir com a Viagem...")
+
     else:
-       print("\nVocê está sem Combustível Suficiente⛽❌. Abasteça!!🚨") 
+        if(combustível >= 30):
+            combustível = combustível - 30 ## ----> Gastar combustível
+            print("\nA Nave Viajou!!🚀🚀")
+        else:
+            print("\nVocê está sem Combustível Suficiente⛽❌. Abasteça!!🚨") 
     
 
 def abastecer():
@@ -25,18 +30,19 @@ def status_nave():
 def registrar_tripulante():
     novo_tripulante = input("Qual o nome do Tripulante?: ")
     tripulantes.append(novo_tripulante)
-    print("Tripulante Inserido com Sucesso!!🧑‍🚀🪪")
+    print("\nTripulante Inserido com Sucesso!!🧑‍🚀🪪")
+    print(f"\nOs Tripulantes presentes na Nave são: {tripulantes}")
 
 def suprimir_tripulante():
     if len(tripulantes) == 0:
         print("Não há Tripulantes para remover!!⚠️")
         print("Adicione um Tripulante para prosseguir...")
     else:
-        ## tripulante_removido = input("Qual o nome do Tripulante que quer retirar?: ") 
-        ## tripulantes.remove(tripulante_removido)
-        tripulantes.pop()
-        print("Tripulante Removido com Sucesso!!🧑‍🚀🪪")
-        print(f"Os Tripulantes presentes na Nave são: {tripulantes}")
+        tripulante_removido = input("Qual o nome do Tripulante que quer retirar?: ") 
+        tripulantes.remove(tripulante_removido)
+        ## tripulantes.pop()
+        print("\nTripulante Removido com Sucesso!!🧑‍🚀🪪")
+        print(f"\nOs Tripulantes presentes na Nave são: {tripulantes}")
 
 print("\n----> Bem Vindo ao Menu Interativo da Nave!🎛️ 🎚️  Por Favor, selecione uma opção: ")
 while True: ## ----> Loop roda de sempre!!
@@ -52,6 +58,6 @@ while True: ## ----> Loop roda de sempre!!
         registrar_tripulante()
     elif(opção == "5"):
         suprimir_tripulante()
-    elif(opção == "¨6"):
-        print("Viagem Encerrada!")
+    elif(opção == "6"):
+        print("\nViagem Encerrada!")
         break 
